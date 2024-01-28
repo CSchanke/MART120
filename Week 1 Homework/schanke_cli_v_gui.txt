@@ -1,0 +1,18 @@
+The Difference Between CLI and GUI
+Chase Schanke
+MART120 - Creative Coding
+01/28/2024
+
+	Command Line Interfaces, or CLIs for short, are a method of passing commands to a computer directly with very little translation
+between human speech and computer code. They often appear as a black background with white text upon the user can type various commands.
+These commands vary from system to system, but always give the user more complete control over the computer. GUIs, or Graphical User 
+Interfaces, do not always give the user complete and direct control over the computer's functions. Instead, they often layer commands 
+under a thickveneer of graphic design in order to make the operation easier to understand and complete for the average user.
+	It is considered unusual for end users to interact with the command line in a computer today, as most users will not understand
+exactly how to do this. In addition, most essential functions are available through a graphical user interface in Windows and MAC
+operating systems. However, in amny distributions of the Linux operating system (for desktop), the CLI, often called the terminal, is still
+a primary means of operating the computer. Despite how uncommon it is for the average computer user to leverage the command line, it does
+have uses today.
+
+Note: The image is of me creating mounting points in a VM on which I was installing Arch Linux after creating and formatting 
+partitions.
