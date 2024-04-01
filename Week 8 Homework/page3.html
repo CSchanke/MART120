@@ -1,0 +1,42 @@
+<!DOCTPYE html>
+<html lang="en">
+<head>
+<script>
+function getContactInfo()
+{
+var name = document.getElementById("Name").value;
+var phone = document.getElementById("Phone").value;
+window.alert("your info: " + name + phone);
+}
+</script>
+<title>New Website</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1>How strong do you think a camel's bite is?</h1>
+<br>
+<form>
+<input type="checkbox" value="150psi">150psi<br>
+<input type="checkbox" value="400psi">400psi<br>
+<input type="checkbox" value="900psi">900psi<br>
+</form>
+<br>
+<br>
+It's actually 400psi.
+<br>
+<br>
+Contact us for more camel facts.
+<br>
+<form>
+<input type="text" value = " " id="Name">Name
+<br>
+<input type="text" value = " " id="Phone">Phone
+<br>
+<button id="btnSubmit" class="btn btn-primary" onClick="getContactInfo();">Submit My Info</button>
+</form>
+<br>
+Click <a href="page2.html">here</a> to see a fun gif.
+<br>
+<a href="index.html">Back to landing page</a>
+</body>
+</html>
