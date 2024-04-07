@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+First p5.js page
+</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script>
+function setup() {
+  createCanvas(400, 400);
+
+}
+//var xa = 135
+//var xb = 160
+var[xa,xb,xc,xd,xe,xf,xg,xh,xi] = [135,160,235,260,150,250,185,235,245]
+var[ya,yb,yc,yd,ye] = [150,151,270,260,250]
+var move = Math.floor(Math.random() * 10) + 1;
+var moveA = Math.floor(Math.random() * 10) + 1;
+var moveB = Math.floor(Math.random() * 10) + 1;
+var size = 10;
+var sizeModifier = 1;
+var counter = 0;
+function draw() {
+  background(220);
+  circle(200,200,200);
+  circle(200,400,200);
+  triangle(175,200,225,200,200,235);
+  ellipse(150,175,40,30);
+  ellipse(250,175,40,30);
+  point(xe,175);
+  point(xf,175);
+  line(xg,yc,xh,yd);
+  line(xh,yd,xi,ye);
+  line(xa,ya,xb,yb);
+  line(xc,yb,xd,ya);
+  textSize(size);
+  text('Hello there...',50,50);
+  size+=sizeModifier;
+  counter++;
+  if(counter>10){sizeModifier*=-1;counter=0;}
+  text('GENERAL KENOBI!',250,50);
+  if (ya < 130 || ya>150){move*=-1;}
+  if(xe<140||xe>160){moveA*=-1;}
+  if(xg<175||xg>195){moveB*=-1}
+  ya += move;
+  yb += move;
+  xe -= moveA;
+  xf += moveA;
+  xg-=moveB;
+  xh-=moveB;
+  xi-=moveB;
+  yc+=moveB;
+  yd+=moveB;
+  ye+=moveB;
+
+}
+</script>
+<br>
+<br>
+Me.
+</head>
+<body>
+</body>
+</html>
