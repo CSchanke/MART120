@@ -1,0 +1,46 @@
+function setup() {
+  createCanvas(400, 400);
+}
+var[x,y,d]=[200,290,20];
+var gravity = 2;
+var[boltX,boltY,wepLength,wepDam,wepID] = [0,350,30,3,1];
+var[enemyX,enemyY] = [20,295];
+var spawnCounter = 0;
+var spawnCount = 0;
+var moveSpeed = 2;
+function draw() {
+  background(220);
+  line(0,300,400,300);
+  spawnCounter++;
+  if(y<290){y+=gravity;}
+  circle(x,y,d);
+  if(keyIsDown(65)){x-=moveSpeed;}
+  if(keyIsDown(68)){x+=moveSpeed;}
+  if(keyIsDown(32)){
+   boltX = x;
+    boltY = y;
+    line(boltX,boltY,(boltX-=wepLength),boltY)
+   }
+  if (spawnCounter > 20){
+    spawnCount ++;
+    spawnCounter = 0;
+  }
+  if(spawnCount!=0){
+    circle(enemyX,enemyY,10);
+  }
+  if(enemyX>x){enemyX--;}
+  if(enemyX<x){enemyX++;}
+  if((boltX>enemyX) && (boltX < (enemyX + 5)) && boltY==y || (boltX<enemyX) && (boltX > (enemyX + 5)) && boltY==y)
+    {
+      spawnCount = 0;
+      enemyX = 20;
+    }
+  boltY =350;
+  
+}
+function keyPressed()
+{
+  if(keyCode==87&&y==290){y-=30;}
+  if(keyCode==68){wepLength*=-1}
+  if(keyCode==65){wepLength=abs(wepLength);}
+}
