@@ -1,0 +1,39 @@
+function setup() {
+  createCanvas(400, 400);
+
+}
+var[x,y,d]=[35,365,30]
+var[xA,yA,dA,xB,yB,dB]=[50,50,50,350,350,80]
+var[click,mX,mY]=[0,0,0]
+var win = false
+function draw() {
+  background(220);
+  fill(color=('green'))
+  circle(x,y,d)
+  fill(color='red')
+  circle(xA,yA,dA)
+  fill(color=('blue'))
+  circle(xB,yB,dB)
+  if(keyIsDown(38))(y--)
+  else{if(keyIsDown(37))(x--)
+      else{if(keyIsDown(40))(y++)
+      else{if(keyIsDown(39))(x++)}}}
+  xA+=random(-40,40)
+  xB+=random(-40,40)
+  yA+=random(-40,40)
+  yB+=random(-40,40)
+  if(xA>399){xA=1}
+  if(xA<1){xA=399}
+  if(yA<1){yA=399}
+  if(yA>399){yA=1}
+  if(xB>399){xB=1}
+  if(xB<1){xB=399}
+  if(yB<1){yB=399}
+  if(yB>399){yB=1}
+  if(click>0){fill(color='pink');circle(mX,mY,100)}
+  line(388,88,388,24)
+  fill(color='black')
+  text('EXIT -->',300,50)
+  if((x>388)&&(y>24&&y<88)){text('YOU WIN!!!',200,200)}
+}
+function mouseClicked(){click=1;mY=mouseY;mX=mouseX;}
